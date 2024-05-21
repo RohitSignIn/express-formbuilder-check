@@ -3,6 +3,8 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require('cors')
 
+require('dotenv').config()
+
 const saveForm = require('./saveForm');
 
 const app = express()
@@ -26,7 +28,7 @@ app.listen(port, () => {
 
   mongoose
   .connect(
-    "mongodb+srv://rohit:1mongo2%40MONGO@cluster0.jndlghm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+    process.env.MONGO_URI,
   )
   .then(() => console.log("mongodb connected"))
   .catch((err) => {
