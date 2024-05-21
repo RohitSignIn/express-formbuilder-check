@@ -26,7 +26,7 @@ app.listen(port, () => {
 
   mongoose
   .connect(
-    "mongodb+srv://rohit:1mongo2%40MONGO@cluster0.jndlghm.mongodb.net/formeasy?retryWrites=true&w=majority&appName=Cluster0",
+    "mongodb+srv://rohit:1mongo2%40MONGO@cluster0.jndlghm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
   )
   .then(() => console.log("mongodb connected"))
   .catch((err) => {
